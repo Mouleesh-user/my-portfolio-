@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="Portfolio of Mouleeshwaran SP - Software Developer focused on AI and Full Stack development." />
+	<title>Mouleeshwaran SP | Developer Portfolio</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+	<script>
+		(() => {
+			try {
+				const savedTheme = localStorage.getItem("theme");
+				const theme = savedTheme === "light" ? "light" : "dark";
+				document.documentElement.setAttribute("data-theme", theme);
+				document.documentElement.style.colorScheme = theme;
+			} catch (error) {
+				document.documentElement.setAttribute("data-theme", "dark");
+				document.documentElement.style.colorScheme = "dark";
+			}
+		})();
+	</script>
+	<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+	<button class="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="false">
+		<span class="theme-toggle-icons" aria-hidden="true">
+			<svg class="theme-icon icon-moon" viewBox="0 0 24 24" fill="none">
+				<path d="M20 15.25A8.25 8.25 0 0 1 8.75 4 8.5 8.5 0 1 0 20 15.25Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+			<svg class="theme-icon icon-sun" viewBox="0 0 24 24" fill="none">
+				<circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8" />
+				<path d="M12 2.5v2.25M12 19.25v2.25M21.5 12h-2.25M4.75 12H2.5M18.72 5.28l-1.59 1.59M6.87 17.13l-1.59 1.59M18.72 18.72l-1.59-1.59M6.87 6.87 5.28 5.28" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+			</svg>
+		</span>
+	</button>
+	<header class="site-header">
+		<div class="container nav">
+			<a href="#home" class="brand">Mouleeshwaran<span>.</span></a>
+			<nav>
+				<ul class="nav-links">
+					<li><a href="#projects">Projects</a></li>
+					<li><a href="#experience">Experience</a></li>
+					<li><a href="#skills">Skills</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main id="home" class="container">
+		<section class="section hero">
+			<div class="hero-card hero-animate">
+				<span class="eyebrow">Developer Portfolio</span>
+				<h1 class="hero-title">Mouleeshwaran SP</h1>
+				<p class="role">Software Developer | AI &amp; Full Stack</p>
+				<p class="tagline">I build efficient AI systems with a focus on performance and real-world impact.</p>
+				<div class="cta-row">
+					<a class="btn primary" href="#projects">View Projects</a>
+					<a class="btn ghost" href="#contact">Contact</a>
+				</div>
+				<ul class="chips">
+					<li>LLM Integrations</li>
+					<li>Practical AI Systems</li>
+					<li>Full-Stack Development</li>
+				</ul>
+			</div>
+		</section>
+
+		<section id="projects" class="section reveal">
+			<h2 class="section-title">Projects</h2>
+			<p class="section-lead">Engineering-focused projects built around measurable performance, real-world usability, and scalable implementation choices.</p>
+
+			<div class="projects-grid">
+				<article class="project-card highlight">
+					<h3>CollegeFindr - AI-Powered College Recommendation Platform</h3>
+					<p>Built a full-stack college recommendation platform using Flask, HTML, CSS, and JavaScript, enabling end-to end query handling and dynamic recommendations.Integrated Llama (Open Router API) for conversational, personalized suggestions and optimized the system to handle high-volume simulated queries reliably.</p>
+					<ul class="tag-row">
+						<li>HTML</li>
+						<li>CSS</li>
+						<li>JavaScript</li>
+						<li>Python</li>
+						<li>Flask</li>
+						<li>LLaMA</li>
+						<li>OpenRouter API</li>
+					</ul>
+					<div class="card-actions">
+						<a class="small-btn" href="https://github.com/Mouleesh-user/collegefindr-frontend" target="_blank" rel="noopener noreferrer">GitHub</a>
+						<a class="small-btn" href="https://mouleesh-user.github.io/collegefindr-frontend/" target="_blank" rel="noopener noreferrer">Live Demo</a>
+					</div>
+				</article>
+
+				<article class="project-card">
+					<h3>GPU Parallel Processing Performance Analysis</h3>
+					<p>Implemented and benchmarked GPU vs CPU computation for matrix operations using CUDA and OpenACC workflows. Achieved up to 3x speedup for large datasets (&gt;96x96), and analyzed transfer overhead, kernel behavior, and scalability limits for compute-intensive workloads.</p>
+					<ul class="tag-row">
+						<li>CUDA C/C++</li>
+						<li>OpenACC</li>
+						<li>NVIDIA CUDA Toolkit</li>
+					</ul>
+					<div class="card-actions">
+						<a class="small-btn" href="https://github.com/Mouleesh-user/GPU-Parallel-Processing-Performance-Analysis" target="_blank" rel="noopener noreferrer">GitHub</a>
+					</div>
+				</article>
+
+				<article class="project-card">
+					<h3>Low-Light Traffic Detection System using YOLOv8</h3>
+					<p>Built a low-light traffic detection system using YOLOv8 and OpenCV, applying image enhancement techniques (CLAHE, gamma correction, denoising) to improve detection accuracy in night conditions.Processed video streams with optimized inference pipeline, detecting and tracking vehicles in real-time and generating annotated output videos</p>
+					<ul class="tag-row">
+						<li>Python</li>
+						<li>OpenCV</li>
+						<li>YOLOv8</li>
+						<li>Deep Learning</li>
+					</ul>
+					<div class="card-actions">
+						<a class="small-btn" href="https://github.com/Mouleesh-user/Low-Light-Traffic-Detection-System-using-YOLOv8" target="_blank" rel="noopener noreferrer">GitHub</a>
+					</div>
+				</article>
+
+				<article class="project-card">
+					<h3>Tomato Leaf Disease Prediction using Deep Learning</h3>
+					<p>Developed a deep learning system using CNN (EfficientNet) to classify tomato leaves into healthy, early blight, and late blight categories. Integrated Grad-CAM for visual interpretability and built a lightweight TensorFlow Lite deployment pipeline for real-time, low-resource environments.</p>
+					<ul class="tag-row">
+						<li>Python</li>
+						<li>TensorFlow Lite</li>
+						<li>CNN (EfficientNet)</li>
+						<li>OpenCV</li>
+						<li>NumPy</li>
+					</ul>
+				</article>
+
+				<article class="project-card">
+					<h3>Simon Game</h3>
+					<p>Built an interactive JavaScript memory game with deterministic sequence generation, progressive difficulty, and responsive event-driven feedback. Designed for consistent gameplay behavior across desktop and mobile screens.</p>
+					<ul class="tag-row">
+						<li>HTML</li>
+						<li>CSS</li>
+						<li>JavaScript</li>
+					</ul>
+					<div class="card-actions">
+						<a class="small-btn" href="https://github.com/Mouleesh-user/simon-game" target="_blank" rel="noopener noreferrer">GitHub</a>
+					</div>
+				</article>
+			</div>
+		</section>
+
+		<section id="experience" class="section reveal">
+			<h2 class="section-title">Experience</h2>
+			<p class="section-lead">Hands-on internship experience focused on production-quality web delivery, API integration, and measurable performance gains.</p>
+
+			<div class="experience-grid">
+				<article class="experience-card">
+					<div class="experience-head">
+						<h3>Web Developer Intern</h3>
+						<p>Arctic Engineering Co.</p>
+					</div>
+					<p>Built and optimized responsive web applications using HTML, CSS, JavaScript, and Python, enhancing performance and cross-browser compatibility. Validated REST APIs and workflows using Postman, improving application reliability and reducing UI/UXissues.projects</p>
+					<ul class="tag-row">
+						<li>HTML</li>
+						<li>CSS</li>
+						<li>JavaScript</li>
+						<li>Python</li>
+						<li>REST APIs</li>
+						<li>Postman</li>
+					</ul>
+				</article>
+			</div>
+		</section>
+
+		<section id="skills" class="section reveal">
+			<h2 class="section-title">Skills</h2>
+			<p class="section-lead">Technical stack organized by problem-solving area, from software engineering and backend systems to AI deployment and GPU acceleration.</p>
+
+			<div class="skills-grid">
+				<article class="skill-group">
+					<h3>Languages</h3>
+					<ul class="skill-list">
+						<li>Python</li>
+						<li>Java</li>
+						<li>JavaScript</li>
+						<li>C</li>
+						<li>C++</li>
+						<li>SQL</li>
+					</ul>
+				</article>
+
+				<article class="skill-group">
+					<h3>Web &amp; Backend</h3>
+					<ul class="skill-list">
+						<li>HTML</li>
+						<li>CSS</li>
+						<li>JavaScript</li>
+						<li>Flask</li>
+						<li>REST APIs</li>
+					</ul>
+				</article>
+
+				<article class="skill-group">
+					<h3>AI &amp; Data</h3>
+					<ul class="skill-list">
+						<li>Machine Learning</li>
+						<li>Computer Vision</li>
+						<li>YOLOv8</li>
+						<li>OpenCV</li>
+						<li>NumPy</li>
+						<li>Pandas</li>
+					</ul>
+				</article>
+
+				<article class="skill-group">
+					<h3>Systems &amp; GPU</h3>
+					<ul class="skill-list">
+						<li>CUDA</li>
+						<li>OpenACC</li>
+						<li>Parallel Computing</li>
+					</ul>
+				</article>
+
+				<article class="skill-group">
+					<h3>Tools</h3>
+					<ul class="skill-list">
+						<li>Git</li>
+						<li>Postman</li>
+						<li>Linux</li>
+						<li>VS Code</li>
+					</ul>
+				</article>
+
+				<article class="skill-group">
+					<h3>Cloud</h3>
+					<ul class="skill-list">
+						<li>AWS</li>
+						<li>Oracle OCI</li>
+					</ul>
+				</article>
+			</div>
+		</section>
+
+		<section id="about" class="section reveal">
+			<h2 class="section-title">About</h2>
+			<div class="about-card">
+				<div class="about-content">
+					<img
+						class="about-photo"
+						src="myphotoresume.jpeg"
+						alt="Portrait photo"
+						loading="lazy"
+					/>
+					<p class="about-copy">
+						I focus on building practical AI-driven systems that solve real-world problems. My work spans full-stack development, computer vision, and GPU computing, with a strong emphasis on performance optimization and scalable design.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<section id="contact" class="section reveal">
+			<h2 class="section-title">Contact</h2>
+			<p class="section-lead">If you want to collaborate on AI or full-stack products, feel free to reach out.</p>
+
+			<div class="contact-grid">
+				<a class="contact-item" href="mailto:mouleeshwaran222@gmail.com">
+					<svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+						<path d="M4 6h16v12H4z" stroke="currentColor" stroke-width="1.8" />
+						<path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.8" />
+					</svg>
+					<div>
+						<strong>Email</strong>
+						<span>mouleeshwaran222@gmail.com</span>
+					</div>
+				</a>
+
+				<a class="contact-item" href="tel:+918667570557">
+					<svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+						<path d="M7 2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.8" />
+						<path d="M9.5 5h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+						<circle cx="12" cy="18" r="1" fill="currentColor" />
+					</svg>
+					<div>
+						<strong>Phone</strong>
+						<span>+91 8667570557</span>
+					</div>
+				</a>
+
+				<a class="contact-item" href="https://github.com/" target="_blank" rel="noopener noreferrer">
+					<svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+						<path d="M9 19c-4 1.5-4-2-6-2m12 4v-3.9a3.4 3.4 0 0 0-.9-2.6c3 0 6-1.5 6-6.7A5.2 5.2 0 0 0 18 4.2 4.8 4.8 0 0 0 17.9 1S16.8.7 14 2.6a13 13 0 0 0-5 0C6.2.7 5.1 1 5.1 1A4.8 4.8 0 0 0 5 4.2a5.2 5.2 0 0 0-1.4 3.6c0 5.2 3 6.7 6 6.7a3.4 3.4 0 0 0-.9 2.6V21" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+					</svg>
+					<div>
+						<strong>GitHub</strong>
+						<span>github.com</span>
+					</div>
+				</a>
+
+				<a class="contact-item" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+					<svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+						<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z" stroke="currentColor" stroke-width="1.7" />
+						<path d="M2 9h4v12H2zM4 4.5a2 2 0 1 0 0-.01z" stroke="currentColor" stroke-width="1.7" />
+					</svg>
+					<div>
+						<strong>LinkedIn</strong>
+						<span>linkedin.com</span>
+					</div>
+				</a>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container">
+			<p>&copy; <span id="year"></span> Mouleeshwaran SP. Built with HTML, CSS, and JavaScript.</p>
+		</div>
+	</footer>
+	<script src="script.js"></script>
+</body>
+</html>
