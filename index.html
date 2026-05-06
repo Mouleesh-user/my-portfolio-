@@ -6,6 +6,19 @@
 	<meta name="description" content="Portfolio of Mouleeshwaran SP - Software Developer focused on AI and Full Stack development." />
 	<title>Mouleeshwaran SP | Developer Portfolio</title>
 
+	<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230f172a'/%3E%3Ctext x='50' y='70' text-anchor='middle' font-family='Inter,Arial,sans-serif' font-size='66' font-weight='800' fill='%236780f4'%3EM%3C/text%3E%3C/svg%3E" />
+
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Mouleeshwaran SP | Developer Portfolio" />
+	<meta property="og:description" content="Software Developer focused on AI and Full Stack development. Building practical AI-driven systems with measurable performance and real-world impact." />
+	<meta property="og:image" content="myphotoresume.jpeg" />
+	<meta property="og:site_name" content="Mouleeshwaran SP" />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Mouleeshwaran SP | Developer Portfolio" />
+	<meta name="twitter:description" content="Software Developer focused on AI and Full Stack development." />
+	<meta name="twitter:image" content="myphotoresume.jpeg" />
+
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -40,7 +53,12 @@
 	<header class="site-header">
 		<div class="container nav">
 			<a href="#home" class="brand">Mouleeshwaran<span>.</span></a>
-			<nav>
+			<button class="nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-nav">
+				<span class="nav-toggle-bar"></span>
+				<span class="nav-toggle-bar"></span>
+				<span class="nav-toggle-bar"></span>
+			</button>
+			<nav id="primary-nav">
 				<ul class="nav-links">
 					<li><a href="#projects">Projects</a></li>
 					<li><a href="#experience">Experience</a></li>
@@ -55,19 +73,25 @@
 	<main id="home" class="container">
 		<section class="section hero">
 			<div class="hero-card hero-animate">
-				<span class="eyebrow">Developer Portfolio</span>
-				<h1 class="hero-title">Mouleeshwaran SP</h1>
-				<p class="role">Software Developer | AI &amp; Full Stack</p>
-				<p class="tagline">I build efficient AI systems with a focus on performance and real-world impact.</p>
-				<div class="cta-row">
-					<a class="btn primary" href="#projects">View Projects</a>
-					<a class="btn ghost" href="#contact">Contact</a>
+				<div class="hero-text">
+					<span class="eyebrow">Developer Portfolio</span>
+					<h1 class="hero-title">Mouleeshwaran SP</h1>
+					<p class="role">Software Developer | AI &amp; Full Stack</p>
+					<p class="tagline">I build efficient AI systems with a focus on performance and real-world impact.</p>
+					<div class="cta-row">
+						<a class="btn primary" href="#projects">View Projects</a>
+						<a class="btn ghost" href="#contact">Contact</a>
+						<a class="btn ghost" href="resume.pdf" download>Download Resume</a>
+					</div>
+					<ul class="chips">
+						<li>LLM Integrations</li>
+						<li>Practical AI Systems</li>
+						<li>Full-Stack Development</li>
+					</ul>
 				</div>
-				<ul class="chips">
-					<li>LLM Integrations</li>
-					<li>Practical AI Systems</li>
-					<li>Full-Stack Development</li>
-				</ul>
+				<div class="hero-portrait" aria-hidden="true">
+					<img src="myphotoresume.jpeg" alt="" loading="eager" />
+				</div>
 			</div>
 		</section>
 
@@ -77,11 +101,9 @@
 
 			<div class="projects-grid">
 				<article class="project-card highlight">
-					<div class="project-thumb">
-						<img src="images/collegefindr.jpg" alt="CollegeFindr screenshot" loading="lazy" onerror="this.parentElement.classList.add('no-image'); this.remove();" />
-					</div>
+					<div class="project-thumb" role="img" aria-label="CollegeFindr preview"><img src="images/collegefindr.png" alt="CollegeFindr landing page" loading="lazy" onerror="this.parentElement.classList.add('no-image');this.remove();" /></div>
 					<h3>CollegeFindr - AI-Powered College Recommendation Platform</h3>
-					<p>Built a full-stack college recommendation platform using Flask, HTML, CSS, and JavaScript, enabling end-to-end query handling and dynamic recommendations. Integrated Llama (OpenRouter API) for conversational, personalized suggestions and optimized the system to handle high-volume simulated queries reliably.</p>
+					<p>A full-stack platform that recommends colleges through a Llama-powered chat layer (OpenRouter API). Tuned to handle high query volume reliably and return personalized suggestions in real time.</p>
 					<ul class="tag-row">
 						<li>HTML</li>
 						<li>CSS</li>
@@ -98,11 +120,9 @@
 				</article>
 
 				<article class="project-card">
-					<div class="project-thumb">
-						<img src="images/gpu.jpg" alt="GPU Parallel Processing screenshot" loading="lazy" onerror="this.parentElement.classList.add('no-image'); this.remove();" />
-					</div>
+					<div class="project-thumb no-image" role="img" aria-label="GPU Parallel Processing preview"></div>
 					<h3>GPU Parallel Processing Performance Analysis</h3>
-					<p>Implemented and benchmarked GPU vs CPU computation for matrix operations using CUDA and OpenACC workflows. Achieved up to 3x speedup for large datasets (&gt;96x96), and analyzed transfer overhead, kernel behavior, and scalability limits for compute-intensive workloads.</p>
+					<p>Benchmarked GPU vs CPU matrix operations across CUDA and OpenACC, reaching up to 3× speedup on datasets larger than 96×96. Analyzed transfer overhead, kernel behavior, and scalability limits.</p>
 					<ul class="tag-row">
 						<li>CUDA C/C++</li>
 						<li>OpenACC</li>
@@ -114,11 +134,9 @@
 				</article>
 
 				<article class="project-card">
-					<div class="project-thumb">
-						<img src="images/yolov8.jpg" alt="Low-Light Traffic Detection screenshot" loading="lazy" onerror="this.parentElement.classList.add('no-image'); this.remove();" />
-					</div>
+					<div class="project-thumb" role="img" aria-label="Low-Light Traffic Detection preview"><img src="images/low-light-traffic.png" alt="Low-Light Traffic Detection app" loading="lazy" onerror="this.parentElement.classList.add('no-image');this.remove();" /></div>
 					<h3>Low-Light Traffic Detection System using YOLOv8</h3>
-					<p>Built a low-light traffic detection system using YOLOv8 and OpenCV, applying image enhancement techniques (CLAHE, gamma correction, denoising) to improve detection accuracy in night conditions. Processed video streams with an optimized inference pipeline, detecting and tracking vehicles in real-time and generating annotated output videos.</p>
+					<p>YOLOv8 vehicle detection on night footage, with CLAHE, gamma correction, and denoising to recover accuracy in low-light conditions. Outputs annotated videos with real-time vehicle tracking.</p>
 					<ul class="tag-row">
 						<li>Python</li>
 						<li>OpenCV</li>
@@ -132,11 +150,9 @@
 				</article>
 
 				<article class="project-card">
-					<div class="project-thumb">
-						<img src="images/tomato.jpg" alt="Tomato Leaf Disease Prediction screenshot" loading="lazy" onerror="this.parentElement.classList.add('no-image'); this.remove();" />
-					</div>
+					<div class="project-thumb no-image" role="img" aria-label="Tomato Leaf Disease Prediction preview"></div>
 					<h3>Tomato Leaf Disease Prediction using Deep Learning <span class="status-badge">In Development</span></h3>
-					<p>Developed a deep learning system using CNN (EfficientNet) to classify tomato leaves into healthy, early blight, and late blight categories. Integrated Grad-CAM for visual interpretability and built a lightweight TensorFlow Lite deployment pipeline for real-time, low-resource environments.</p>
+					<p>EfficientNet CNN classifying tomato leaves as healthy, early blight, or late blight, with Grad-CAM for visual interpretability. Packaged as a TensorFlow Lite pipeline for low-resource deployment.</p>
 					<ul class="tag-row">
 						<li>Python</li>
 						<li>TensorFlow Lite</li>
@@ -147,11 +163,9 @@
 				</article>
 
 				<article class="project-card">
-					<div class="project-thumb">
-						<img src="images/simon.jpg" alt="Simon Game screenshot" loading="lazy" onerror="this.parentElement.classList.add('no-image'); this.remove();" />
-					</div>
+					<div class="project-thumb" role="img" aria-label="Simon Game preview"><img src="images/simon-game.png" alt="Simon Game board" loading="lazy" onerror="this.parentElement.classList.add('no-image');this.remove();" /></div>
 					<h3>Simon Game</h3>
-					<p>Built an interactive JavaScript memory game with deterministic sequence generation, progressive difficulty, and responsive event-driven feedback. Designed for consistent gameplay behavior across desktop and mobile screens.</p>
+					<p>Interactive memory game in vanilla JS with deterministic sequences, progressive difficulty, and event-driven feedback. Tuned for consistent gameplay across desktop and mobile.</p>
 					<ul class="tag-row">
 						<li>HTML</li>
 						<li>CSS</li>
@@ -295,7 +309,7 @@
 					</svg>
 					<div>
 						<strong>GitHub</strong>
-						<span>https://github.com/Mouleesh-user</span>
+						<span>github.com/Mouleesh-user</span>
 					</div>
 				</a>
 
@@ -306,7 +320,7 @@
 					</svg>
 					<div>
 						<strong>LinkedIn</strong>
-						<span>https://www.linkedin.com/in/mouleeshwaran-sp-0a1307298</span>
+						<span>linkedin.com/in/mouleeshwaran-sp</span>
 					</div>
 				</a>
 			</div>

@@ -60,6 +60,39 @@ if (yearElement) {
 	yearElement.textContent = String(new Date().getFullYear());
 }
 
+const navContainer = document.querySelector(".nav");
+const navToggleButton = document.querySelector(".nav-toggle");
+const navMenu = document.getElementById("primary-nav");
+
+if (navContainer && navToggleButton && navMenu) {
+	const setNavOpen = (isOpen) => {
+		navContainer.classList.toggle("is-open", isOpen);
+		navToggleButton.setAttribute("aria-expanded", String(isOpen));
+		navToggleButton.setAttribute(
+			"aria-label",
+			isOpen ? "Close navigation menu" : "Open navigation menu"
+		);
+	};
+
+	navToggleButton.addEventListener("click", () => {
+		const isOpen = navContainer.classList.contains("is-open");
+		setNavOpen(!isOpen);
+	});
+
+	navMenu.addEventListener("click", (event) => {
+		if (event.target.closest("a")) {
+			setNavOpen(false);
+		}
+	});
+
+	document.addEventListener("keydown", (event) => {
+		if (event.key === "Escape" && navContainer.classList.contains("is-open")) {
+			setNavOpen(false);
+			navToggleButton.focus();
+		}
+	});
+}
+
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 const revealSections = document.querySelectorAll(".reveal");
 
